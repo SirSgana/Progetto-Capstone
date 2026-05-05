@@ -1,35 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public delegate void PauseEvent();
-
 public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu instance;
-    public GameObject pauseMenuUI;       
-    public static bool isPaused = false; 
+    public GameObject pauseMenuUI;
+    public static bool isPaused = false;
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-
-            
-            transform.SetParent(null);
-
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     void Update()
     {
-       
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (isPaused)
@@ -47,8 +31,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenuUI.SetActive(false); 
-        Time.timeScale = 1f;         
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
         isPaused = false;
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -57,8 +41,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        pauseMenuUI.SetActive(true);  
-        Time.timeScale = 0f;          
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
         isPaused = true;
 
         Cursor.lockState = CursorLockMode.None;

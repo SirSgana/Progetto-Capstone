@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5534383620200805132}
   - component: {fileID: 762246597294785661}
+  - component: {fileID: 4616252258573062343}
   m_Layer: 0
   m_Name: PT_Generic_Shrub_01_green
   m_TagString: Untagged
@@ -146,6 +147,29 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1955015890131924908}
   m_Enabled: 1
+--- !u!136 &4616252258573062343
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153741093904279990}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Height: 0.6846346
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.24231729, z: 0.050000004}
 --- !u!1 &8255632427206956809
 GameObject:
   m_ObjectHideFlags: 0
